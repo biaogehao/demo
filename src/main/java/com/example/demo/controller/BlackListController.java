@@ -69,7 +69,7 @@ public class BlackListController {
             r = Result.fail();
             r.setRetCode(e.getId());
         } catch (Exception e) {
-            logger.error("添加黑名单失败", e);
+            logger.error("添加黑名单失败.", e);
             r = Result.fail();
         }
         return r;

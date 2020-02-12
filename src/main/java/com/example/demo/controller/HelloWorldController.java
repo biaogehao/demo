@@ -7,6 +7,6 @@ package com.example.demo.controller;
 public class HelloWorldController {
     @RequestMapping("/hello")
     public String index() {
-        return "Hello Worlddemo";
+        return "Hello Worlddemo1";
     }
 }
