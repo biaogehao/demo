@@ -1,0 +1,19 @@
+package rules;
+
+import com.example.demo.model.Event
+import com.example.demo.model.RuleResult;
+import com.example.demo.service.DimensionService;
+
+global DimensionService dimensionService
+
+rule "0_all_addevent"
+    salience 0
+    lock-on-active true
+    when
+        event:Event()
+        resultParam : RuleResult()
+    then
+        dimensionService.insertEvent(event);
+        resultParam.setPostCodeResult(true);
+end
+
